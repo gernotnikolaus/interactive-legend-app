@@ -9,7 +9,7 @@ body {
   overflow: hidden;
 
   font-family: Arial, sans-serif;
-  background: rgb(80, 29, 29);
+  background: white;
 }
 
 
@@ -27,12 +27,11 @@ body {
 
 
 #legendContainer {
-  position: relative;
-
-  width: 95%;
-  max-width: 800px;
-
-  aspect-ratio: 1 / 1;
+    position: relative;
+    width: 95%;
+    max-width: 800px;
+    height: 800px;
+    margin: auto;
 }
 
 
