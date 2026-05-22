@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legend Test</title>
+  <title>Interactive Legend</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="legendContainer">
-    <img id="baseLegend" />
-    <img id="slice1" class="slice">
+  <!-- LEGEND VIEW -->
+  <div id="legendView">
+    <div id="legendContainer">
+      <img id="baseLegend">
+    </div>
+  </div>
+
+  <!-- PDF VIEW -->
+  <div id="pdfView">
+
+    <div class="toolbar">
+      <button id="backButton">← Back</button>
+    </div>
+
+    <iframe id="pdfFrame"></iframe>
+
   </div>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
