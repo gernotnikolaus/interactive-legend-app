@@ -9,7 +9,7 @@ const legends = {
       {
         name: "CanalRehabilitationGatesAutomation",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_CanalRehabilitationGatesAutomation.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_CanalRehabilitationGatesAutomation.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_CanalRehabilitationGatesAutomation.pdf"
       },
@@ -17,7 +17,7 @@ const legends = {
       {
         name: "FloodplainEncroachmentRemova",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_FloodplainEncroachmentRemoval.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_FloodplainEncroachmentRemoval.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_FloodplainEncroachmentRemoval.pdf"
       },
@@ -25,7 +25,7 @@ const legends = {
       {
         name: "GreenhousingFeatures",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_GreenhousingFeatures.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_GreenhousingFeatures.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_GreenhousingFeatures.pdf"
       },
@@ -33,7 +33,7 @@ const legends = {
       {
         name: "RetrofittingBridges",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RetrofittingBridges.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RetrofittingBridges.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_RetrofittingBridges.pdf"
       },
@@ -41,7 +41,7 @@ const legends = {
       {
         name: "RetrofittingRoads",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RetrofittingRoads.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RetrofittingRoads.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_RetrofittingRoads.pdf"
       },
@@ -49,7 +49,7 @@ const legends = {
       {
         name: "RetrofittingSchoolsHealthFacilities",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RetrofittingSchoolsHealthFacilities.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RetrofittingSchoolsHealthFacilities.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_RetrofittingSchoolsHealthFacilities.pdf"
       },
@@ -57,7 +57,7 @@ const legends = {
       {
         name: "RiverEnbankmentStabilization",
 
-        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RiverEnbankmentStabilizations.svg/",
+        svg: "legends/punjab/infrastructure/Punjab_Infrastructure_Legend_RiverEnbankmentStabilizations.svg",
 
         pdf: "legends/punjab/infrastructure/Punjab_Infrastructure_Factsheet_RiverEnbankmentStabilization.pdf"
       },
