@@ -51,8 +51,6 @@ SLIDES.forEach(name => {
     name +
     ".svg";
 
-    img.style.zIndex = index + 1;  
-
   img.onclick = () => {
     openPDF(name);
   };

@@ -29,7 +29,6 @@ html, body {
 #baseLegend {
   width: 100%;
   display: block;
-  pointer-events: none;
 }
 
 /* SLICES */
@@ -42,7 +41,6 @@ html, body {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease;
-  pointer-events: auto;
 }
 
 .slice:hover {
