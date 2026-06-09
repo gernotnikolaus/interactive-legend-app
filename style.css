@@ -39,11 +39,9 @@ html, body {
   left: 0;
   width: 100%;
 
-  opacity: 0;
+  opacity: 1;
 
   cursor: pointer;
-
-  pointer-events: none;
 }
 
 .slice:hover {

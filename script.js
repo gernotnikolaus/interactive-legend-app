@@ -63,9 +63,9 @@ function getActiveSlice(clientX, clientY) {
 // --- Hover: highlight whichever slice is under cursor ---
 legendContainer.addEventListener("mousemove", e => {
   const hit = getActiveSlice(e.clientX, e.clientY);
-  sliceImgs.forEach(({ img }) => img.style.opacity = "0");
+  sliceImgs.forEach(({ img }) => img.style.filter = "none");
   if (hit) {
-    hit.img.style.opacity = "0.6";
+    hit.img.style.filter = "drop-shadow(0 0 12px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 24px rgba(255, 200, 50, 0.6))";
     legendContainer.style.cursor = "pointer";
   } else {
     legendContainer.style.cursor = "default";
@@ -73,7 +73,7 @@ legendContainer.addEventListener("mousemove", e => {
 });
 
 legendContainer.addEventListener("mouseleave", () => {
-  sliceImgs.forEach(({ img }) => img.style.opacity = "0");
+  sliceImgs.forEach(({ img }) => img.style.filter = "none");
   legendContainer.style.cursor = "default";
 });
 
