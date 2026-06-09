@@ -65,7 +65,7 @@ legendContainer.addEventListener("mousemove", e => {
   const hit = getActiveSlice(e.clientX, e.clientY);
   sliceImgs.forEach(({ img }) => img.style.opacity = "0");
   if (hit) {
-    hit.img.style.opacity = "0.25";
+    hit.img.style.opacity = "0.6";
     legendContainer.style.cursor = "pointer";
   } else {
     legendContainer.style.cursor = "default";
