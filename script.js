@@ -65,30 +65,6 @@ SLIDES.forEach(name => {
 
   };
 
-  img.addEventListener("click", e => {
-
-    const rect = img.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const realX =
-      Math.floor(x * img.naturalWidth / rect.width);
-
-    const realY =
-      Math.floor(y * img.naturalHeight / rect.height);
-
-    const pixel =
-      ctx.getImageData(realX, realY, 1, 1).data;
-
-    const alpha = pixel[3];
-
-    if (alpha > 0) {
-      openPDF(name);
-    }
-
-  });
-
 });
 
 
