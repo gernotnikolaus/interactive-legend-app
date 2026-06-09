@@ -65,7 +65,7 @@ legendContainer.addEventListener("mousemove", e => {
   const hit = getActiveSlice(e.clientX, e.clientY);
   sliceImgs.forEach(({ img }) => img.style.filter = "none");
   if (hit) {
-    hit.img.style.filter = "drop-shadow(0 0 12px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 24px rgba(0, 0, 0, 0.35))";
+    hit.img.style.filter = "drop-shadow(0 0 12px rgba(0, 0, 0, 0.59)) drop-shadow(0 0 24px rgba(0, 0, 0, 0.7))";
     legendContainer.style.cursor = "pointer";
   } else {
     legendContainer.style.cursor = "default";
