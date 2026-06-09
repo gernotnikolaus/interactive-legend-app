@@ -42,6 +42,8 @@ html, body {
   opacity: 0;
 
   cursor: pointer;
+
+  pointer-events: none;
 }
 
 .slice:hover {
