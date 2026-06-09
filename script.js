@@ -51,19 +51,11 @@ SLIDES.forEach(name => {
     name +
     ".svg";
 
-  // offscreen canvas for pixel testing
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
-
-  img.onload = () => {
-
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0);
-
+  img.onclick = () => {
+    openPDF(name);
   };
+
+  legendContainer.appendChild(img);
 
 });
 
