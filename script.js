@@ -43,6 +43,8 @@ SLIDES.forEach(name => {
 
   const img = document.createElement("img");
 
+  img.style.pointerEvents = "auto";
+
   img.className = "slice";
 
   img.src =
