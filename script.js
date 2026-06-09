@@ -86,15 +86,27 @@ legendContainer.addEventListener("click", e => {
 // --- PDF open/close ---
 function openPDF(name) {
   const pdfPath = BASE_PATH + "pdf/Punjab_Infrastructure_Factsheet_" + name + ".pdf";
-  legendView.style.display = "none";
-  pdfView.style.display = "flex";
+  
   pdfFrame.src = pdfPath;
+  pdfView.style.display = "flex";
+  pdfView.style.opacity = "0";
+  legendView.style.display = "none";
+
+  requestAnimationFrame(() => {
+    pdfView.style.transition = "opacity 0.4s ease";
+    pdfView.style.opacity = "1";
+  });
 }
 
 function closePDF() {
-  pdfView.style.display = "none";
-  legendView.style.display = "flex";
-  pdfFrame.src = "";
+  pdfView.style.transition = "opacity 0.3s ease";
+  pdfView.style.opacity = "0";
+
+  setTimeout(() => {
+    pdfView.style.display = "none";
+    legendView.style.display = "flex";
+    pdfFrame.src = "";
+  }, 300);
 }
 
 backButton.addEventListener("click", closePDF);
