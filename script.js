@@ -43,8 +43,6 @@ SLIDES.forEach(name => {
 
   const img = document.createElement("img");
 
-  img.style.pointerEvents = "auto";
-
   img.className = "slice";
 
   img.src =
@@ -53,11 +51,43 @@ SLIDES.forEach(name => {
     name +
     ".svg";
 
-  img.onclick = () => {
-    openPDF(name);
+  // offscreen canvas for pixel testing
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  img.onload = () => {
+
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
+
   };
 
-  legendContainer.appendChild(img);
+  img.addEventListener("click", e => {
+
+    const rect = img.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const realX =
+      Math.floor(x * img.naturalWidth / rect.width);
+
+    const realY =
+      Math.floor(y * img.naturalHeight / rect.height);
+
+    const pixel =
+      ctx.getImageData(realX, realY, 1, 1).data;
+
+    const alpha = pixel[3];
+
+    if (alpha > 0) {
+      openPDF(name);
+    }
+
+  });
 
 });
 
