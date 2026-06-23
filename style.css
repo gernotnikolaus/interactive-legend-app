@@ -15,7 +15,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: #e1eded;
 }
 
 #legendContainer {
