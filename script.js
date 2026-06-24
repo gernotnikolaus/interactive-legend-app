@@ -9,7 +9,7 @@ const THEMES = {
     pdfPrefix: "Punjab_Infrastructure_Factsheet_",
     background: "#e1eded",
     slides: [
-      "CanalRehabilitationGatesAutomation",
+      "CanalRehabilitationGateAutomation",
       "FloodplainEncroachmentRemoval",
       "GreenhousingFeatures",
       "RetrofittingBridges",
