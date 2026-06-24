@@ -15,7 +15,7 @@ const THEMES = {
       "RetrofittingBridges",
       "RetrofittingRoads",
       "RetrofittingSchoolsHealthFacilities",
-      "RiverEnbankmentStabilization"
+      "RiverEmbankmentStabilization"
     ]
   },
   punjab_agriculture: {
