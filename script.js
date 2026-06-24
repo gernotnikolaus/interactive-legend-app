@@ -2,7 +2,7 @@
 // sector config
 // -----------------------------
 const THEMES = {
-  infrastructure: {
+  punjab_infrastructure: {
     path: "legends/punjab/infrastructure/",
     base: "Punjab_Infrastructure_Legend_Base.svg",
     prefix: "Punjab_Infrastructure_Legend_",
@@ -18,7 +18,7 @@ const THEMES = {
       "RiverEnbankmentStabilization"
     ]
   },
-  agriculture: {
+  punjab_agriculture: {
     path: "legends/punjab/agriculture/",
     base: "Punjab_Agriculture_Legend_Base.svg",
     prefix: "Punjab_Agriculture_Legend_",
@@ -26,6 +26,15 @@ const THEMES = {
     background: "#507d7d",
     slides: [
       "DrainageChannels",
+      "DroughtTolerantSeedVarieties",
+      "FloodplainForestRestoration",
+      "FloodProtectionEmbankments",
+      "FloodTolerantSeedVarieties",
+      "HighEfficiencyIrrigationSystem",
+      "IntegratedRiskMonitoringEarlyWarningSystem",
+      "RainwaterHarvesting",
+      "Rangeland Rehabilitation",
+      "SilageFeedStorage"
     ]
   }
 };
