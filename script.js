@@ -33,7 +33,7 @@ const THEMES = {
       "HighEfficiencyIrrigationSystem",
       "IntegratedRiskMonitoringEarlyWarningSystem",
       "RainwaterHarvesting",
-      "Rangeland Rehabilitation",
+      "RangelandRehabilitation",
       "SilageFeedStorage"
     ]
   }
