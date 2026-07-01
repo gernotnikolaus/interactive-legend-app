@@ -113,7 +113,7 @@ legendContainer.addEventListener("click", e => {
 });
 
 function openPDF(name) {
-  const pdfPath = THEME.path + "img/" + THEME.pdfPrefix + name + ".png";
+  const imgPath = THEME.path + "img/" + THEME.pdfPrefix + name + ".png";
   
   pdfFrame.src = imgPath;
   pdfView.style.display = "flex";
