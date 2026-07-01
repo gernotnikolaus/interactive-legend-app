@@ -1,7 +1,7 @@
 # interactive-legend-app
 
 A lightweight, embeddable interactive legend viewer.  
-Click a pie slice → opens the corresponding PDF factsheet.  
+Click a pie slice → opens the corresponding factsheet.  
 Driven entirely by URL parameters — no backend needed.
 
 ---
@@ -19,14 +19,14 @@ project/
         │   ├── Punjab_Infrastructure_Legend_Base.svg
         │   ├── Punjab_Infrastructure_Legend_RetrofittingRoads.svg
         │   ├── ... (one SVG per slice)
-        │   └── pdf/
-        │       ├── Punjab_Infrastructure_Factsheet_RetrofittingRoads.pdf
-        │       └── ... (one PDF per slice)
+        │   └── sheet/
+        │       ├── Punjab_Infrastructure_Factsheet_RetrofittingRoads.png
+        │       └── ... (one png per slice)
         └── agriculture/
             ├── Punjab_Agriculture_Legend_Base.svg
             ├── Punjab_Agriculture_Legend_DrainageChannels.svg
             ├── ...
-            └── pdf/
+            └── sheet/
                 └── ...
 ```
 

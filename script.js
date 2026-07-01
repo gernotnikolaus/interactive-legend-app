@@ -1,6 +1,27 @@
-// -----------------------------
-// sector config
-// -----------------------------
+// ============================================================
+// Interactive Legend – script.js
+// ============================================================
+// Loads a themed SVG legend based on the URL parameter ?theme=
+// Each theme has a base SVG + clickable slice SVGs that open
+// a factsheet. Slice hit-testing uses canvas pixel sampling
+// so transparent areas are correctly ignored.
+//
+// URL usage, e.g.:
+//   index.html?theme=punjab_infrastructure
+//   index.html?theme=punjab_agriculture
+// ============================================================
+
+
+// ------------------------------------------------------------
+// THEME CONFIG
+// Add new themes here. Each entry needs:
+//   path       – folder containing SVGs and /sheer/ subfolder
+//   base       – filename of the base legend SVG
+//   prefix     – filename prefix for slice SVGs
+//   sheetPrefix  – filename prefix for png factsheets
+//   background – CSS color for the legend background
+//   slides     – list of slice/factsheet name suffixes
+// ------------------------------------------------------------
 const THEMES = {
   punjab_infrastructure: {
     path: "legends/punjab/infrastructure/",
@@ -41,14 +62,17 @@ const THEMES = {
 
 // -----------------------------
 // READ THEME FROM URL
+// Reads ?theme= from the URL, falls back to punjab_infrastructure
+// ------------------------------------------------------------
 const params = new URLSearchParams(window.location.search);
-const themeName = params.get("theme") || "infrastructure";
-const THEME = THEMES[themeName] || THEMES["infrastructure"];
+const themeName = params.get("theme") || "punjab_infrastructure";
+const THEME = THEMES[themeName] || THEMES["punjab_infrastructure"];
 
 // Apply background
 document.getElementById("legendView").style.background = THEME.background;
 document.title = `Legend – ${themeName.charAt(0).toUpperCase() + themeName.slice(1)}`;
 
+// DOM REFERENCES
 const baseLegend = document.getElementById("baseLegend");
 const legendContainer = document.getElementById("legendContainer");
 const legendView = document.getElementById("legendView");
@@ -56,8 +80,12 @@ const sheetView = document.getElementById("sheetView");
 const sheetFrame = document.getElementById("sheetFrame");
 const backButton = document.getElementById("backButton");
 
+// LOAD BASE LEGEND
 baseLegend.src = THEME.path + THEME.base;
 
+// ----------------------------------------------------
+// BUILD SLICE IMAGES
+// --------------------------------------------------
 const sliceImgs = [];
 
 THEME.slides.forEach(name => {
@@ -70,6 +98,9 @@ THEME.slides.forEach(name => {
   sliceImgs.push({ name, img });
 });
 
+// ------------------------------------------------------------
+// CANVAS HIT-TESTING
+// ------------------------------------------------------------
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -91,6 +122,9 @@ function getActiveSlice(clientX, clientY) {
   return null;
 }
 
+// --------------------------------------------------------
+// HOVER EFFECT
+// -------------------------------------------------------
 legendContainer.addEventListener("mousemove", e => {
   const hit = getActiveSlice(e.clientX, e.clientY);
   sliceImgs.forEach(({ img }) => img.style.filter = "none");
@@ -112,6 +146,9 @@ legendContainer.addEventListener("click", e => {
   if (hit) openSheet(hit.name);
 });
 
+// ------------------------------------------------------------
+// OPEN SHEET
+// ------------------------------------------------------------
 function openSheet(name) {
   const sheetPath = THEME.path + "sheet/" + THEME.sheetPrefix + name + ".png";
   
@@ -126,6 +163,9 @@ function openSheet(name) {
   });
 }
 
+// ---------------------------------------------------
+// CLOSE SHEET
+// ------------------------------------------------------------
 function closeSheet() {
   sheetView.style.transition = "opacity 0.3s ease";
   sheetView.style.opacity = "0";
