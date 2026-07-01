@@ -114,14 +114,7 @@ legendContainer.addEventListener("click", e => {
 
 function openPDF(name) {
   const pdfPath = THEME.path + "pdf/" + THEME.pdfPrefix + name + ".pdf";
-  pdfFrame.src = pdfPath;
-  pdfView.style.display = "flex";
-  pdfView.style.opacity = "0";
-  legendView.style.display = "none";
-  requestAnimationFrame(() => {
-    pdfView.style.transition = "opacity 0.4s ease";
-    pdfView.style.opacity = "1";
-  });
+  window.open(pdfPath, "_blank");
 }
 
 function closePDF() {
