@@ -6,7 +6,7 @@ const THEMES = {
     path: "legends/punjab/infrastructure/",
     base: "Punjab_Infrastructure_Legend_Base.svg",
     prefix: "Punjab_Infrastructure_Legend_",
-    pdfPrefix: "Punjab_Infrastructure_Factsheet_",
+    sheetPrefix: "Punjab_Infrastructure_Factsheet_",
     background: "#e1eded",
     slides: [
       "CanalRehabilitationGateAutomation",
@@ -22,7 +22,7 @@ const THEMES = {
     path: "legends/punjab/agriculture/",
     base: "Punjab_Agriculture_Legend_Base.svg",
     prefix: "Punjab_Agriculture_Legend_",
-    pdfPrefix: "Punjab_Agriculture_Factsheet_",
+    sheetPrefix: "Punjab_Agriculture_Factsheet_",
     background: "#507d7d",
     slides: [
       "DrainageChannels",
@@ -52,8 +52,8 @@ document.title = `Legend – ${themeName.charAt(0).toUpperCase() + themeName.sli
 const baseLegend = document.getElementById("baseLegend");
 const legendContainer = document.getElementById("legendContainer");
 const legendView = document.getElementById("legendView");
-const pdfView = document.getElementById("pdfView");
-const pdfFrame = document.getElementById("pdfFrame");
+const sheetView = document.getElementById("sheetView");
+const sheetFrame = document.getElementById("sheetFrame");
 const backButton = document.getElementById("backButton");
 
 baseLegend.src = THEME.path + THEME.base;
@@ -109,31 +109,31 @@ legendContainer.addEventListener("mouseleave", () => {
 
 legendContainer.addEventListener("click", e => {
   const hit = getActiveSlice(e.clientX, e.clientY);
-  if (hit) openPDF(hit.name);
+  if (hit) openSheet(hit.name);
 });
 
-function openPDF(name) {
-  const imgPath = THEME.path + "img/" + THEME.pdfPrefix + name + ".png";
+function openSheet(name) {
+  const sheetPath = THEME.path + "sheet/" + THEME.sheetPrefix + name + ".png";
   
-  pdfFrame.src = imgPath;
-  pdfView.style.display = "flex";
-  pdfView.style.opacity = "0";
+  sheetFrame.src = sheetPath;
+  sheetView.style.display = "flex";
+  sheetView.style.opacity = "0";
   legendView.style.display = "none";
 
   requestAnimationFrame(() => {
-    pdfView.style.transition = "opacity 0.4s ease";
-    pdfView.style.opacity = "1";
+    sheetView.style.transition = "opacity 0.4s ease";
+    sheetView.style.opacity = "1";
   });
 }
 
-function closePDF() {
-  pdfView.style.transition = "opacity 0.3s ease";
-  pdfView.style.opacity = "0";
+function closeSheet() {
+  sheetView.style.transition = "opacity 0.3s ease";
+  sheetView.style.opacity = "0";
   setTimeout(() => {
-    pdfView.style.display = "none";
+    sheetView.style.display = "none";
     legendView.style.display = "flex";
-    pdfFrame.src = "";
+    sheetFrame.src = "";
   }, 300);
 }
 
-backButton.addEventListener("click", closePDF);
+backButton.addEventListener("click", closeSheet);

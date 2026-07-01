@@ -50,7 +50,7 @@ html, body {
 }
 
 /* PDF VIEW */
-#pdfView {
+#sheetView {
   display: none;
   width: 100%;
   height: 100%;
@@ -61,7 +61,7 @@ html, body {
   align-items: flex-start;
 }
 
-#pdfFrame {
+#sheetFrame {
   width: 100%;
   max-width: 1200px;
   height: auto;          
