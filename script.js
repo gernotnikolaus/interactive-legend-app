@@ -81,7 +81,7 @@ const THEMES = {
       "GreenhousingFeatures",
       "RetrofittingSchoolsHealthFacilities",
       "RetrofittingStormwaterDrainage",
-      "RiverEmbankmentStabilizationRoads"
+      "RiverEmbankmentStabilization"
     ]
   },
 };
