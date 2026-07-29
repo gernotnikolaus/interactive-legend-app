@@ -61,7 +61,7 @@ const THEMES = {
     punjab_socialprotection: {
     path: "legends/punjab/socialprotection/",
     base: "Punjab_SocialProtection_Legend_Base.svg",
-    prefix: "Punjab_SocialProtection_Legend",
+    prefix: "Punjab_SocialProtection_Legend_",
     sheetPrefix: "Punjab_SocialProtection_Factsheet_",
     background: "#e1eded",
     slides: [
