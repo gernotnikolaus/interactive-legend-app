@@ -63,7 +63,7 @@ const THEMES = {
     base: "Punjab_SocialProtection_Legend_Base.svg",
     prefix: "Punjab_SocialProtection_Legend_",
     sheetPrefix: "Punjab_SocialProtection_Factsheet_",
-    background: "#e1eded",
+    background: "#f4faeb",
     slides: [
       "BISPEmergencyCashAssistance",
       "DistrictHealthInformationSystem",
