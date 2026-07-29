@@ -44,7 +44,7 @@ const THEMES = {
     base: "Punjab_Agriculture_Legend_Base.svg",
     prefix: "Punjab_Agriculture_Legend_",
     sheetPrefix: "Punjab_Agriculture_Factsheet_",
-    background: "#507d7d",
+    background: "#e1eded",
     slides: [
       "DrainageChannels",
       "DroughtTolerantSeedVarieties",
@@ -57,7 +57,33 @@ const THEMES = {
       "RangelandRehabilitation",
       "SilageFeedStorage"
     ]
-  }
+  },
+    punjab_socialprotection: {
+    path: "legends/punjab/socialprotection/",
+    base: "Punjab_SocialProtection_Legend_Base.svg",
+    prefix: "Punjab_SocialProtection_Legend",
+    sheetPrefix: "Punjab_SocialProtection_Factsheet_",
+    background: "#e1eded",
+    slides: [
+      "BISPEmergencyCashAssistance",
+      "DistrictHealthInformationSystem",
+      "IntegratedRiskMonitoringEarlyWarningSystem"
+    ]
+  },
+    punjab_urbanresilience: {
+    path: "legends/punjab/urbanresilience/",
+    base: "Punjab_UrbanResilience_Legend_Base.svg",
+    prefix: "Punjab_UrbanResilience_Legend_",
+    sheetPrefix: "Punjab_UrbanResilience_Factsheet_",
+    background: "#e1eded",
+    slides: [
+      "FloodplainEncroachmentRemoval",
+      "GreenhousingFeatures",
+      "RetrofittingSchoolsHealthFacilities",
+      "RetrofittingStormwaterDrainage",
+      "RiverEmbankmentStabilizationRoads"
+    ]
+  },
 };
 
 // -----------------------------
