@@ -28,7 +28,7 @@ const THEMES = {
     base: "Punjab_Infrastructure_Legend_Base.svg",
     prefix: "Punjab_Infrastructure_Legend_",
     sheetPrefix: "Punjab_Infrastructure_Factsheet_",
-    background: "#e1eded",
+    background: "#f5ffff",
     slides: [
       "CanalRehabilitationGateAutomation",
       "FloodplainEncroachmentRemoval",
@@ -44,7 +44,7 @@ const THEMES = {
     base: "Punjab_Agriculture_Legend_Base.svg",
     prefix: "Punjab_Agriculture_Legend_",
     sheetPrefix: "Punjab_Agriculture_Factsheet_",
-    background: "#e1eded",
+    background: "#f4faeb",
     slides: [
       "DrainageChannels",
       "DroughtTolerantSeedVarieties",
@@ -63,7 +63,7 @@ const THEMES = {
     base: "Punjab_SocialProtection_Legend_Base.svg",
     prefix: "Punjab_SocialProtection_Legend_",
     sheetPrefix: "Punjab_SocialProtection_Factsheet_",
-    background: "#f4faeb",
+    background: "#f7f5ff",
     slides: [
       "BISPEmergencyCashAssistance",
       "DistrictHealthInformationSystem",
@@ -75,7 +75,7 @@ const THEMES = {
     base: "Punjab_UrbanResilience_Legend_Base.svg",
     prefix: "Punjab_UrbanResilience_Legend_",
     sheetPrefix: "Punjab_UrbanResilience_Factsheet_",
-    background: "#e1eded",
+    background: "#dfedf8",
     slides: [
       "FloodplainEncroachmentRemoval",
       "GreenhousingFeatures",
